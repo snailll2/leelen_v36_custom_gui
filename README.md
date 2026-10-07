@@ -33,13 +33,23 @@
 
 设备需与电脑同网段且 Web 可达(原厂固件自带 Web;或已开启 telnet):
 
+**方式 A(已有本固件)**:Web 控制台在线更新(见上节)。
+**方式 B(电脑刷写)**:本仓 `imaging/` 内置**全套镜像分区 + 刷写脚本**(见 [`imaging/README.md`](imaging/README.md)):
+
+```bash
+bash imaging/flash_usr.sh <设备IP>      # 刷 APP 分区(FTP/nc + md5 门 + VERIFY OK + 回读复核)
+# 分区烧/救砖整片: imaging/burn_parts_v4.py 与 imaging/output/B_full_16MB_v4.bin
+```
+
+**方式 C(从源码构建)**:
+
 ```bash
 git clone https://github.com/snailll2/leelen_v36_app && cd leelen_v36_app
 bash imaging/release.sh                 # Docker 交叉编译 + 出厂镜像(自动升版本号)
-bash imaging/flash_usr.sh <设备IP>      # 刷 APP 分区(FTP/nc + md5 门 + VERIFY OK + 回读复核)
+bash imaging/flash_usr.sh <设备IP>      # 刷 APP 分区
 ```
 
-更完整的构建/烧录/恢复文档见源码仓库 `imaging/README.md` 与 `docs/`。
+构建/烧录/恢复的完整文档见源码仓库 `imaging/README.md` 与 `docs/`。
 
 ## 仓库结构
 
@@ -47,7 +57,11 @@ bash imaging/flash_usr.sh <设备IP>      # 刷 APP 分区(FTP/nc + md5 门 + VE
 ├── README.md          ← 本文件
 ├── version.json       ← 版本信息(OTA 检查用)
 ├── usr.sqsh4.new      ← APP 分区镜像(squashfs,含 app/驱动/工具)
-└── imgs/              ← 截图
+├── imgs/              ← 截图
+└── imaging/           ← 全套镜像分区 + 刷写/部署/救砖脚本(见 imaging/README.md)
+    ├── output/          全部分区镜像 + 16MB 整片(脱敏版)
+    ├── _imgwork/slices/ 单分区切片
+    └── flash_usr.sh / burn_parts_v4.py / captures/ ... 刷写脚本与依赖
 ```
 
 ## 已知边界

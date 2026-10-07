@@ -1,0 +1,65 @@
+{
+  "UBOOT": {
+    "off": "0x0",
+    "cap": "0x74000",
+    "size": 214084,
+    "md5": "a4f563f394273ae41f03ab06f07e12e9",
+    "src": "/Users/snail/WORK/IOT/leelen_intercom_opensrc/imaging/output/u-boot.bin"
+  },
+  "ENV": {
+    "off": "0x74000",
+    "cap": "0x1000",
+    "size": 4096,
+    "md5": "ad9876ca3f3d0e5a2cf58433aee1b47c",
+    "src": "/Users/snail/WORK/IOT/leelen_intercom_opensrc/imaging/output/env_v4.img"
+  },
+  "DTB": {
+    "off": "0x75000",
+    "cap": "0x10000",
+    "size": 63925,
+    "md5": "424196dab9160c992470d8bd7a2c56c1",
+    "src": "/Users/snail/WORK/IOT/leelen_intercom_opensrc/imaging/output/dtb_flash_wifi.dtb"
+  },
+  "KERNEL": {
+    "off": "0x85000",
+    "cap": "0x200000",
+    "size": 2097152,
+    "md5": "3cf5fe41baee483d6005d5e1a1d76b9a",
+    "src": "/Users/snail/WORK/IOT/leelen_intercom_opensrc/imaging/output/uImage"
+  },
+  "ROOTFS": {
+    "off": "0x285000",
+    "cap": "0x200000",
+    "size": 1474560,
+    "md5": "bc0ac6dbe31347dddb16f9ac539ae09a",
+    "src": "/Users/snail/WORK/IOT/leelen_intercom_opensrc/sdk/anycloud_bsp/ak-linux-sdk-main/AnyCloud37E_SDK_V1.08/rootfs/root.sqsh4"
+  },
+  "CONFIG": {
+    "off": "0x485000",
+    "cap": "0x4b000",
+    "size": 868,
+    "md5": "d752bb0c00cb6f341e53ded6fed5d98e",
+    "src": "/Users/snail/WORK/IOT/leelen_intercom_opensrc/sdk/anycloud_bsp/ak-linux-sdk-main/AnyCloud37E_SDK_V1.08/image/config.jffs2"
+  },
+  "APP": {
+    "off": "0x4d0000",
+    "cap": "0x500000",
+    "size": 4890624,
+    "md5": "7fb4df868fac3447ea6964be41afdc03",
+    "src": "/Users/snail/WORK/IOT/leelen_intercom_opensrc/sdk/anycloud_bsp/ak-linux-sdk-main/AnyCloud37E_SDK_V1.08/rootfs/usr.sqsh4.new"
+  },
+  "LOGO": {
+    "off": "0x9d0000",
+    "cap": "0x4b000",
+    "size": 297000,
+    "md5": "12db640f5dcf98adf922c862c788619f",
+    "src": "/Users/snail/WORK/IOT/leelen_intercom_opensrc/imaging/output/logo.bin"
+  },
+  "DATA": {
+    "off": "0xa1b000",
+    "cap": "0x5e5000",
+    "size": 1123676,
+    "md5": "9d3185cd6f82040ac75a2b4b1befc027",
+    "src": "/Users/snail/WORK/IOT/leelen_intercom_opensrc/imaging/output/data.jffs2"
+  }
+}
